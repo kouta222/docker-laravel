@@ -1,0 +1,98 @@
+
+/* ----------------------------------------------- 全体の文字色修正と下部の余白の調整 */
+body {
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+    margin: 5rem;
+  }
+  
+  /* ----------------------------------------------- カルーセルのカスタマイズ */
+  .carousel {
+    margin-bottom: 4rem;
+    margin-left: 3rem;
+  
+  }
+  
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  .carousel-item {
+    height: 25rem;
+  
+  }
+  
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 80%;
+    height: 20rem;
+  }
+  
+  /* ----------------------------------------------- マーケティングコンテンツ */
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .marketing h2 {
+    font-weight: 400;
+  }
+  
+  /* rtl:begin:ignore */
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  
+  /* rtl:end:ignore */
+  
+  /* ----------------------------------------------- フィーチャーレット */
+  .featurette-divider {
+    margin: 5rem 0;
+    /* Space out the Bootstrap <hr> more */
+  }
+  
+  .featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    /* rtl:remove */
+    letter-spacing: -.05rem;
+  }
+  
+  /* ----------------------------------------------- レスポンシブデザイン */
+  @media (min-width: 40em) {
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
+  
+  .waseda-photo {
+    width:1000px; 
+    height:500px; 	
+  }
+  
+     .waseda {
+    padding-left: 10px;
+  }
+  
+  h1 {
+    margin-bottom: 1000px;
+  }
+  
+  
+  

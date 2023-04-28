@@ -1,0 +1,441 @@
+@font-face {
+    font-family: YuGo;
+    src: local(YuGo-Medium),
+      url(/path/to/YuGo-Medium.woff2) format("woff2"),
+      url(/path/to/YuGo-Medium.woff) format("woff"),
+      url(/path/to/YuGo-Medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+  }
+  
+  @font-face {
+    font-family: YuGo;
+    src: local(YuGo-Bold),
+      url(/path/to/YuGo-Bold.woff2) format("woff2"),
+      url(/path/to/YuGo-Bold.woff) format("woff"),
+      url(/path/to/YuGo-Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+  }
+  
+  h1 {
+    font-family: YuGo;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.13px;
+  }
+  
+  h2 {
+    font-family: YuGo;
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  
+  h3 {
+    font-family: YuGo;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.04px;
+  }
+  
+  big {
+    font-family: YuGo;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.08px;
+  }
+  
+  body {
+    font-family: YuGo;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.11px;
+  }
+  
+  caption {
+    font-family: YuGo;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.08px;
+  }
+  
+  label {
+    font-family: YuGo;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #191919;
+
+  }    
+
+  .kakomon-login-input {
+    border-radius: 2px;
+    border: solid 1px #b2b2b2;
+    background-color: #ffffff;
+}
+
+.kakomon-check-label {
+    font-family: YuGo;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.kakomon-require-input-label {
+    border-radius: 1px;
+    background-color: #e2001b;
+}
+
+.kakomon-require-input-label-text {
+    font-family: YuGo;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.kakomon-submit-button {
+    font-family: YuGo;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    background-color: #e2001b;
+}
+
+.kakomon-login-text {
+    font-family: YuGo;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #e2001b;
+}
+
+  
+
+
+.kakomon-header-container {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.kakomon-header-search-input {
+    border: solid 1px #e5e5e5;
+}
+
+.kakomon-header-search-button {
+    background-color: #D0104C;
+}
+
+.kakomon-header-search-icon {
+    color: #ffffff;
+}
+
+.kakomon-header-fav-icon {
+    color: #191919;
+}
+
+.kakomon-header-shoppingcart-icon {
+    color: #ffffff;
+}
+
+.kakomon-favorite-button {
+  border-radius: 2px;
+  border: solid 1px #D0104C;
+  background-color: #ffffff;
+}
+
+.text-favorite {
+  color: #D0104C;
+}
+
+.kakomon-sidebar-category-label {
+  width: 156px;
+  height: 20px;
+  font-family: YuGo;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #191919;
+}
+
+.kakomon-favorite-add-cart {
+  border-radius: 2px;
+  color: #ffffff;
+  background-color: #D0104C;
+}
+
+.review-score-color {
+  color: #D0104C;
+}
+
+.review-score-color:focus {
+  color: #D0104C;
+}
+
+h1 {
+  margin-top: 0px;
+}
+
+footer {
+  width: 100%;
+  background-color: #D0104C;
+  padding-top: 30px;
+  color: #fff;
+}
+
+.carousel-indicators{
+  height: 300px;
+}
+
+.col-9 >img {
+  width: 100%; 
+  height: auto; 
+}
+
+
+.samuraimart-delete-submit-button {
+  border-radius: 2px;
+  color: #ffffff;
+  background-color: #d94b0e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ここからレスポンシブデザイン */
+
+
+
+
+.categories-collection1 { 
+  display: none; 
+} 
+.categories-collection2 { 
+  display: none; 
+  margin-left: 20px;
+} 
+.categories-collection3 { 
+  display: none; 
+} 
+.categories-collection4 { 
+  display: none; 
+} 
+
+.reproducts {
+  display: none;
+}
+
+.dropdown {
+  display: none;
+}
+
+.waseda-pic{
+  display: none;
+}
+
+.picpic {
+display: inline-block;}
+
+.PC {
+  display: inline-block;
+}
+
+.rowphone {
+  display: none;
+}
+
+
+.carouselExampleCaptions{
+  width: auto;
+  height: 200px;
+}
+
+.col{
+  display: none;
+}
+
+.d-grid{
+  display: none;
+}
+
+.row1 {
+  display: none;
+}
+
+/* cart */
+.number-pro{
+  display: none;
+}
+
+.number{
+  display: inline;
+}
+
+
+
+@media screen and (max-width: 768px) { 
+     /* index */
+  .waseda-photo { 
+    width: 100%; 
+    height: auto; 
+   
+  } 
+
+  .waseda-pic{
+    display: inline-block;
+  }
+
+
+
+
+
+  .reproducts {
+    color: #000000;
+  }
+
+  .reproducts {
+    display: inline-block; 
+
+  }
+
+ 
+  .categories-collection1 { 
+    display: inline-block; 
+  } 
+  .categories-collection2 { 
+    display: inline-block; 
+  } 
+  .categories-collection3 { 
+    display: inline-block; 
+  } 
+  .categories-collection4 { 
+    display: inline-block; 
+  } 
+  .footer-logo{ 
+    display: block; 
+  } 
+  .footer-logo-txt{ 
+    display: block; 
+    font-size: small; 
+  }
+
+  .accordion{
+  display: none;
+}
+
+.col{
+  display: block;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.d-grid {
+  display: block;
+ margin-bottom: 30px;
+}
+
+
+.row1{
+  display: block;
+}
+
+.PC {
+  display: none;
+}
+
+.rowphone {
+  display: inline-block;
+}
+
+
+
+/* header */
+.divdiv  {
+  width: 400px;
+  height: 100px;
+}
+
+.col-auto{
+  display: none;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.picpic {
+  display: none;
+}
+
+/* showblade */
+
+.cartmessage {
+  display: none;
+}
+
+.favoritemessage {
+  display: none;
+}
+
+/* cart */
+
+
+.number {
+  display: none;
+}
+
+.number-pro {
+  display: inline-block;
+}
+}

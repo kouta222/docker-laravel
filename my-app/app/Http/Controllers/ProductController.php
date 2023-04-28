@@ -1,0 +1,187 @@
+<?php
+
+namespace App\Http\Controllers;
+use App\Models\Product;
+use App\Models\Category;
+use App\Models\MajorCategory;
+use App\Http\Controllers\ReviewController;
+use Encore\Admin\Grid\Filter\Like;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
+use Illuminate\Http\File;
+use Illuminate\Http\UploadedFile;
+  use Illuminate\Support\Facades\Storage;
+
+
+
+
+
+
+
+class ProductController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Request $request)
+    {
+        if ($request->category !== null) {
+            $products = Product::where('category_id', $request->category)->sortable()->paginate(10);
+            $total_count = Product::where('category_id', $request->category)->count();
+            $category = Category::find($request->category);
+            $major_category = MajorCategory::find($category->major_category_id);
+
+        } else {
+            $products = Product::sortable()->paginate(15);
+            $total_count = "";
+            $category = null;
+            $major_category = null; 
+
+        }       
+         $categories = Category::all();
+         $major_categories = MajorCategory::all();
+
+         return view('products.index', compact('products', 'category', 'major_category', 'categories', 'major_categories', 'total_count',));
+
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $categories = Category::all();
+  
+        return view('products.create', compact('categories'));    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+    
+        $product = new Product();
+        $product->name = $request->input('name');
+        $product->description = $request->input('description');
+        $product->price = $request->input('price');
+        $product->category_id = $request->input('category_id');
+        $product->year = $request->input('year');
+        $product->semester = $request->input('semester');
+        $product->teacher = $request->input('teacher');
+        $product->genre = $request->input('genre');
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $path = $file->storeAs('public/products', $filename);
+            $product->image = $filename;
+        }
+        $product->save();
+
+        return to_route('products.index');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Product $product)
+    {
+        $reviews = $product->reviews()->get();
+  
+        return view('products.show', compact('product', 'reviews'));    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Product $product)
+    {
+        $categories = Category::all();
+  
+        return view('products.edit', compact('product', 'categories'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Product $product)
+    {
+        $product->name = $request->input('name');
+        $product->description = $request->input('description');
+        $product->price = $request->input('price');
+        $product->category_id =$request->input('categoyr_id');
+        $product->year = $request->input('year');
+        $product->semester = $request->input('semester');
+        $product->teacher = $request->input('teacher');
+        $product->genre = $request->input('genre');
+        $product->image = $request->input('image');
+        $product->update();
+
+        return to_route('products.index');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Product $product)
+    {
+        $product->delete();
+  
+         return to_route('web.index');
+    }
+
+    public function favorite(Product $product)
+    {
+        Auth::user()->togglefavorite($product);
+
+        return back();
+    }
+
+    public function search (Request $request){
+        $keyword = $request->input('keyword');
+
+        $query = Product::query();
+
+        if(!empty($keyword)) {
+            $query->where('name', 'LIKE', "%{$keyword}%")
+                ->orWhere('teacher', 'LIKE', "%{$keyword}%");
+        }
+        $products = $query->get();
+
+     
+
+        return view('products.search',compact('keyword','products',));
+        return view('web.index',compact('keyword','products',));
+
+
+    }
+    private function escape(string $value)
+    {
+        return str_replace(
+            ['\\', '%', '_'],
+            ['\\\\', '\\%', '\\_'],
+            $value
+        );
+    }
+
+
+ }

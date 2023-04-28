@@ -1,0 +1,105 @@
+.waseda-button {
+    background-color: red;
+    font-family: YuGo;
+    font-weight: bold;
+    border-radius:  10px;
+    height: 30px;
+    width: 80px;
+    border: none;
+}
+
+header{
+    width: 100%;
+
+    background-color: #efefef;
+
+}
+
+
+  
+  footer {
+    width: 100%;
+    background-color: #efefef;
+    padding-top: 10px;
+    color: black;
+  }
+
+  .footer-menu {
+    display: inline-block;
+  }
+  .footer-menu-item {
+    display: inline-block;
+  }
+
+
+  .footer-logo{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .footer-logo-txt{
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+
+  .paper-airplane-icon{
+    display: inline-block;
+}
+
+
+.recruitment-contact{
+    display: inline-block;
+    margin-left: 550px;
+}
+
+.recruitment-contact-txt {
+    display: inline-block;
+}
+
+.sns-wrap {
+    display: inline-block;
+    text-align: right;
+
+}
+
+
+.footer-copyright{
+    text-align: center;
+}
+
+.home-button{
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 768px) { 
+
+.navbar-brand >img  {
+  height: 75px;
+  width: 150px;
+}
+
+.recruitment-contact{
+  display: none;
+}
+
+.recruitment-contact-txt{
+  display: none;
+}
+
+.footer-menu {
+  display: block;
+}
+.footer-menu-item {
+  display: block;
+}
+
+.sns-wrap {
+  margin-top: 20px;
+}
+
+
+}

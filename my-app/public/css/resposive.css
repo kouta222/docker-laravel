@@ -1,0 +1,54 @@
+.categories-collection { 
+    display: none; 
+  } 
+  .categories-collection1 { 
+    display: none; 
+  } 
+  .categories-collection2 { 
+    display: none; 
+  } 
+  .categories-collection3 { 
+    display: none; 
+  } 
+  .categories-collection4 { 
+    display: none; 
+  } 
+  @media screen and (max-width: 768px) { 
+     
+    .waseda-photo { 
+      width: 100%; 
+      height: auto; 
+     
+    } 
+
+    .categories-collection { 
+      display: inline-block; 
+    } 
+    .categories-collection1 { 
+      display: inline-block; 
+    } 
+    .categories-collection2 { 
+      display: inline-block; 
+      margin-left: 20px; 
+    } 
+    .categories-collection3 { 
+      display: inline-block; 
+      margin-left: 20px; 
+    } 
+    .categories-collection4 { 
+      display: inline-block; 
+    } 
+    .footer-logo{ 
+      display: block; 
+    } 
+    .footer-logo-txt{ 
+      display: block; 
+      font-size: small; 
+    }
+
+    .accordion{
+    display: none;
+}
+
+
+}
